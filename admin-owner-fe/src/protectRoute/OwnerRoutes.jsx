@@ -15,8 +15,9 @@ const OwnerRoutes = ({ children }) => {
           `${baseUrl}/api/owner/check-owner`, { withCredentials: true }
         );
         const data = res.data;
-        if (data.success ===true) {
+        if (data.success === true) {
             setIsAuthenticated(true);
+          
           } else {
             navigate("/login", { replace: true });
           }

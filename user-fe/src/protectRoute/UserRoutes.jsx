@@ -17,7 +17,8 @@ const UserRoutes = ({ children }) => {
         const data = res.data;
         if (data.success === true) {
           setIsAuthenticated(true);
-        } else {
+        }
+        else{
           navigate("/login", { replace: true });
         }
       } catch (error) {
@@ -26,6 +27,7 @@ const UserRoutes = ({ children }) => {
       } finally {
         setAuthChecked(true);
       }
+      
     };
     checkUser();
   }, [navigate]);
